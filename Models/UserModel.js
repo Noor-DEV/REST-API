@@ -13,8 +13,11 @@ const ModelSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-  },
-  { timestamps: true }
+    img: {
+      type: String,
+      required: false,
+    },
+  }
 );
 const UserModel = mongoose.model("users", ModelSchema);
 module.exports = UserModel;
